@@ -1,2 +1,3 @@
+writeLines(readLines("LICENSE"))
 YEAR: 2023
 COPYRIGHT HOLDER: gradecalculatorr authors
