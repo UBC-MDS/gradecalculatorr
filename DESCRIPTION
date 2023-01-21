@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Edward Yukun", "Zhang", , "ykzhang1211@gmail.com", role = c("aut", "cre"))
     person("Chen", "Lin", , "chen@example.com", role = c("aut", "cre"))
-    person("Shirley", "Zhang", , "shirley@example.com", role = c("aut", "cre"))
+    person("Shirley", "Zhang", , "wenlansz@student.ubc.ca", role = c("aut", "cre"))
 Description: This python package calculates grades for a course and 
     allows users to customize their own course information with self-defined course component names, to update grades for different course components,
     and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
