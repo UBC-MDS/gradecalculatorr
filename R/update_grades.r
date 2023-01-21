@@ -12,3 +12,19 @@
 load_course <- function(input_file) {
     
 }
+
+#' Saves the updated course information to a .csv file 
+#'
+#' Takes the data.frame of the course with updated grades, the path to the output 
+#' file, and saves the data.frame as a .csv 
+#'
+#' @param updated_course_df updated dataframe for the course to be saved as a .csv file 
+#' @param output_file path to the output .csv file 
+#'
+#' @return None
+#' @export
+#'
+#' @examples save_course_csv(DSCI100_df, 'DSCI100.csv')
+save_course_csv <- function(updated_course_df, output_file) {
+    
+}
