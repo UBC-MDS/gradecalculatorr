@@ -11,6 +11,6 @@
 #'              Otherwise return warning message.
 #'
 #' @examples predict_final('/DSCI100.csv', 90.0)
-predict_final <- function((input_file, goal)) {
+predict_final <- function(input_file, goal) {
 
 }
