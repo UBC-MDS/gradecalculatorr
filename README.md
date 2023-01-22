@@ -10,7 +10,9 @@
 
 This R package calculates grades for a course. The package allows users to customize their own course information with self-defined course component names, to update grades for different course components, and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
 
-## Functions
+## Usage
+
+### Functions
 
 This package contains the following functions:
 
