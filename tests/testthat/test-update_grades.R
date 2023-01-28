@@ -1,3 +1,6 @@
+library(tidyr)
+library(readr)
+
 test_that('update_component_grade() updates the grade of a component in the .csv file correctly', {
     
   # set values
