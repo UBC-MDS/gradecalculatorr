@@ -27,4 +27,52 @@
 #' @examples construct_course('dsci524', '/')
 construct_course <- function(course_name, output_file_path) {
 
+    course_total_weight <- 0
+    df <- data.frame(Components = character(),
+                 Weights = numeric(),
+                 Grades = numeric())
+    colnames(df) <- c("Components", "Weights_Percentage", "Grades_Percentage")
+    index <- 0
+
+    while (course_total_weight < 100) {
+        curr_component <- c()
+
+        curr_component_name <- readline(sprintf("What is name of %s component #%d? ",
+                                                course_name,
+                                                index + 1))
+
+        curr_component_weight_input <- readline(sprintf("What is weight(%) of %s component #%d? ",
+                                                        course_name,
+                                                        index + 1))
+
+        while (!is.numeric(curr_component_weight_input)) {
+            curr_component_weight_input <- readline(sprintf("Input weight(%) of %s component #%d as integer? ",
+                                                            course_name,
+                                                            index + 1))
+        }
+
+        curr_component_weight <- as.numeric(curr_component_weight_input)
+
+        while (course_total_weight + curr_component_weight > 100) {
+            curr_component_weight <- as.numeric(readline(sprintf("Double check the weight of %s component #%d, ensure total weight not over 100%%? ", 
+                                                                 course_name,
+                                                                 index + 1)))
+        }
+
+        curr_component <- c(curr_component_name, curr_component_weight, NA)
+
+        course_df[index + 1, ] <- curr_component
+
+        course_total_weight <- course_total_weight + curr_component_weight
+
+        index <- index + 1
+    }
+
+    # save course construction dataframe as csv file
+    cwd <- getwd()
+    path <- paste0(cwd, output_file_path)
+    filepath <- file.path(path, paste0(course_name, ".csv"))
+    write.csv(course_df, filepath)
+
+    return(course_df)
 }
