@@ -28,7 +28,7 @@ calculate_grade <- function(input_file_path) {
     course_grade <- 0
     return_msg <- ""
 
-    # Check if all course components have garde present
+    # Check if all course components have grade present
     for(i in seq_len(nrow(course_info))) {
         comp <- course_info[i, 1]
         grade <- course_info[i, 3]
