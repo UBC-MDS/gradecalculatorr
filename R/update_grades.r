@@ -43,5 +43,7 @@ save_course_csv <- function(updated_course_df, output_file) {
 #'
 #' @examples update_assignment_grade('DSCI100.csv', 'Assignment 1', 95.0)
 update_assignment_grade <- function(input_file, component, grade) {
-    
+    df <- load_course(input_file) 
+    df$`Grades (%)`[df$Components == component] <- round(grade, 2)
+    save_course_csv(df, input_file)
 }
