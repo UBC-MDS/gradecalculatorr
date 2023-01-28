@@ -41,3 +41,21 @@ test_that('update_component_grade() only updates the one row that was specified 
     
 })
 
+test_that('update_component_grade() creates a dataframe with the right dimensions', {
+
+    # set values
+    input_file_path <- 'dummycourse.csv'
+    component <- 'Final Exam'
+    expected <- 99
+
+    # read original dataframe
+    df <- read_csv(file=input_file_path)
+
+    # call function 
+    update_component_grade(input_file_path, component, expected)
+    df2 <- read_csv(file=input_file_path)
+
+    # compare new dataframe size 
+    expect_equal(dim(df), dim(df2))
+    
+})
