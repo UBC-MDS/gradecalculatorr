@@ -10,7 +10,7 @@
 #'
 #' @examples load_course('DSCI100.csv')
 load_course <- function(input_file) {
-    
+    read_csv(file=input_file)
 }
 
 #' Saves the updated course information to a .csv file 
@@ -26,7 +26,7 @@ load_course <- function(input_file) {
 #'
 #' @examples save_course_csv(DSCI100_df, 'DSCI100.csv')
 save_course_csv <- function(updated_course_df, output_file) {
-    
+    write_csv(updated_course_df, file=output_file)
 }
 
 #' Saves the updated course information to a .csv file 
@@ -41,7 +41,9 @@ save_course_csv <- function(updated_course_df, output_file) {
 #' @return None
 #' @export
 #'
-#' @examples update_assignment_grade('DSCI100.csv', 'Assignment 1', 95.0)
-update_assignment_grade <- function(input_file, component, grade) {
-    
+#' @examples update_component_grade('DSCI100.csv', 'Assignment 1', 95.0)
+update_component_grade <- function(input_file, component, grade) {
+    df <- load_course(input_file) 
+    df$`Grades (%)`[df$Components == component] <- round(grade, 2)
+    save_course_csv(df, input_file)
 }
