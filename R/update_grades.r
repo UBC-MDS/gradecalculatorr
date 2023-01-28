@@ -10,7 +10,7 @@
 #'
 #' @examples load_course('DSCI100.csv')
 load_course <- function(input_file) {
-    
+    read_csv(file=input_file)
 }
 
 #' Saves the updated course information to a .csv file 
