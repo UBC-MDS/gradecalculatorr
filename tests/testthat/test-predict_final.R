@@ -1,8 +1,3 @@
-library(readr)
-library(tidyr)
-library(devtools)
-library(testthat)
-
 # Set values
 input_file_all <- 'grades_all.csv'
 input_file_miss <- 'grades_miss.csv'
