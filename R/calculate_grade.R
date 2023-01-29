@@ -10,8 +10,9 @@
 #'              The course overall grade once all course components present 
 #'              when all grades are present.
 #'              Otherwise return warning message.
+#' @export
 #'
-#' @examples calculate_grade('/DSCI524.csv')
+#' @examples calculate_grade('tests/testthat/dsci524_grades_all.csv')
 calculate_grade <- function(input_file_path) {
 
     cwd <- getwd()
@@ -23,7 +24,7 @@ calculate_grade <- function(input_file_path) {
 
     error_msg_missing_value <- "Course component grades is missing for "
     error_msg_format <- "Course component grades with incorrect format (not 2 decimal places) for "
-    grade_msg <- "Course garde is "
+    grade_msg <- "Course grade is "
     percent_sign <- "%"
     course_grade <- 0
     return_msg <- ""

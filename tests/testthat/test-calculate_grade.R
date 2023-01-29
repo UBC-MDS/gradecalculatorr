@@ -60,5 +60,5 @@ for (i in seq_len(nrow(course_df))) {
 }
 
 test_that("Calculation of the calculation is incorrect", {
-  expect_equal(calculate_grade(file_path), "Course garde is 86.5%")
+  expect_equal(calculate_grade(file_path), "Course grade is 86.5%")
 })
