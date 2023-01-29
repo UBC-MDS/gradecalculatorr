@@ -1,8 +1,3 @@
-library(readr)
-library(tidyr)
-library(devtools)
-library(testthat)
-
 #' Calculate what grade the student needs to have for the final assignment in order to reach the goal for overall grade
 #' and return the scores needed for the final assignment.
 #'
@@ -16,7 +11,7 @@ library(testthat)
 predict_final <- function(input_file, goal) {
 
   # read the input csv file
-  course_info <- read_csv(file=input_file)
+  course_info <- readr::read_csv(file=input_file)
 
   # Check if all assignment weight sum up to 100%
   if (sum(course_info$`Weights (%)`) != 100) {
