@@ -12,7 +12,7 @@ test_that('update_component_grade() updates the grade of a component in the .csv
     update_component_grade(input_file_path, component, expected)
 
     # compare output with expected grade
-    df <- read_csv(file=input_file_path)
+    df <- readr::read_csv(file=input_file_path)
     expect_equal(df$`Grades (%)`[df$Components == component], expected)
     
 }) 
@@ -25,12 +25,12 @@ test_that('update_component_grade() only updates the one row that was specified 
     expected <- 97
 
     # get original grades list 
-    df <- read_csv(file=input_file_path)
+    df <- readr::read_csv(file=input_file_path)
     df_og_list <- df$`Grades (%)`
 
     # update csv and get new list
     update_component_grade(input_file_path, component, expected)
-    df2 <- read_csv(file=input_file_path)
+    df2 <- readr::read_csv(file=input_file_path)
     df2_list <- df2$`Grades (%)`
 
     # get index of component 
@@ -52,11 +52,11 @@ test_that('update_component_grade() creates a dataframe with the right dimension
     expected <- 99
 
     # read original dataframe
-    df <- read_csv(file=input_file_path)
+    df <- readr::read_csv(file=input_file_path)
 
     # call function 
     update_component_grade(input_file_path, component, expected)
-    df2 <- read_csv(file=input_file_path)
+    df2 <- readr::read_csv(file=input_file_path)
 
     # compare new dataframe size 
     expect_equal(dim(df), dim(df2))

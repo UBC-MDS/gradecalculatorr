@@ -15,7 +15,7 @@ library(testthat)
 #'
 #' @examples NA
 load_course <- function(input_file) {
-    read_csv(file=input_file)
+    readr::read_csv(file=input_file)
 }
 
 #' Saves the updated course information to a .csv file
@@ -31,7 +31,7 @@ load_course <- function(input_file) {
 #'
 #' @examples NA
 save_course_csv <- function(updated_course_df, output_file) {
-    write_csv(updated_course_df, file=output_file)
+    readr::write_csv(updated_course_df, file=output_file)
 }
 
 #' Saves the updated course information to a .csv file
