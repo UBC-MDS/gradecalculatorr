@@ -12,7 +12,7 @@
 #'              Otherwise return warning message.
 #' @export
 #'
-#' @examples calculate_grade('tests/testthat/dsci524_grades_all.csv')
+#' @examples None
 calculate_grade <- function(input_file_path) {
 
     cwd <- getwd()

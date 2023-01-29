@@ -25,7 +25,7 @@
 #' @return None
 #' @export
 #'
-#' @examples construct_course('dsci524', 'tests/testthat/')
+#' @examples None
 construct_course <- function(course_name, output_file_path) {
 
     course_total_weight <- 0
