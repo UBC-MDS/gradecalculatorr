@@ -24,5 +24,5 @@ When all course components are presented,
 calculate the course overall grade based on information provided.
 }
 \examples{
-None
+NA
 }

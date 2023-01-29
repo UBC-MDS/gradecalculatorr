@@ -25,7 +25,7 @@
 #' @return None
 #' @export
 #'
-#' @examples None
+#' @examples NA
 construct_course <- function(course_name, output_file_path) {
 
     course_total_weight <- 0
@@ -56,7 +56,7 @@ construct_course <- function(course_name, output_file_path) {
         curr_component_weight <- as.numeric(curr_component_weight_input)
 
         while (course_total_weight + curr_component_weight > 100) {
-            curr_component_weight <- as.numeric(readline(sprintf("Double check the weight of %s component #%d, ensure total weight not over 100%%? ", 
+            curr_component_weight <- as.numeric(readline(sprintf("Double check the weight of %s component #%d, ensure total weight not over 100%%? ",
                                                                  course_name,
                                                                  index + 1)))
         }

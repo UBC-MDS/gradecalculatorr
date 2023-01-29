@@ -35,5 +35,5 @@ to the file path specified by 'output_file_path' paramater
 }\if{html}{\out{</div>}}
 }
 \examples{
-None
+NA
 }

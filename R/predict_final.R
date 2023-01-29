@@ -11,8 +11,8 @@ library(testthat)
 #'
 #' @return final_score_needed which is the scores needed for the final assignment. Otherwise return warning message.
 #' @export
-#' 
-#' @examples None
+#'
+#' @examples NA
 predict_final <- function(input_file, goal) {
 
   # read the input csv file

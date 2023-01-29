@@ -19,5 +19,5 @@ Takes the data.frame of the course with updated grades, the path to the output
 file, and saves the data.frame as a .csv
 }
 \examples{
-None
+NA
 }

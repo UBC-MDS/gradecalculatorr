@@ -20,5 +20,5 @@ Calculate what grade the student needs to have for the final assignment in order
 and return the scores needed for the final assignment.
 }
 \examples{
-None
+NA
 }
