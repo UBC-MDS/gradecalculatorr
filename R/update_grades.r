@@ -1,8 +1,3 @@
-library(tidyr)
-library(readr)
-library(devtools)
-library(testthat)
-
 #' Loads the 'course.csv' file
 #'
 #' Takes the path to the course's .csv file as an argument ('course.csv'), reads the file,
