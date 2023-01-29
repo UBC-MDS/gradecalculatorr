@@ -10,9 +10,9 @@ library(testthat)
 #' @param goal A numeric value to set the goal for your overall grade for this course.
 #'
 #' @return final_score_needed which is the scores needed for the final assignment. Otherwise return warning message.
-#'
-#' @examples
-#' predict_final('DSCI100.csv', 90.0)
+#' @export
+#' 
+#' @examples None
 predict_final <- function(input_file, goal) {
 
   # read the input csv file

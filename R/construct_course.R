@@ -23,15 +23,16 @@
 #'              to avoid permission issue.
 #'
 #' @return None
+#' @export
 #'
-#' @examples construct_course('dsci524', '/')
+#' @examples None
 construct_course <- function(course_name, output_file_path) {
 
     course_total_weight <- 0
-    df <- data.frame(Components = character(),
+    course_df <- data.frame(Components = character(),
                  Weights = numeric(),
                  Grades = numeric())
-    colnames(df) <- c("Components", "Weights_Percentage", "Grades_Percentage")
+    colnames(course_df) <- c("Components", "Weights_Percentage", "Grades_Percentage")
     index <- 0
 
     while (course_total_weight < 100) {
@@ -41,12 +42,13 @@ construct_course <- function(course_name, output_file_path) {
                                                 course_name,
                                                 index + 1))
 
-        curr_component_weight_input <- readline(sprintf("What is weight(%) of %s component #%d? ",
+        curr_component_weight_input <- readline(sprintf("What is weight percentage of %s component #%d? ",
                                                         course_name,
                                                         index + 1))
+        curr_component_weight_input <- as.integer(curr_component_weight_input)
 
         while (!is.numeric(curr_component_weight_input)) {
-            curr_component_weight_input <- readline(sprintf("Input weight(%) of %s component #%d as integer? ",
+            curr_component_weight_input <- readline(sprintf("Input weight percentage of %s component #%d as integer? ",
                                                             course_name,
                                                             index + 1))
         }
