@@ -2,7 +2,7 @@ Package: gradecalculatorr
 Title: Calculates Grades For a Course
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("Edward Yukun", "Zhang", , "ykzhang1211@gmail.com", role = c("aut", "cre"),
+    c(person("Edward Yukun", "Zhang", , "ykzhang1211@gmail.com", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID")),
       person("Chen", "Lin", , "chen.lin.0404@gmail.com", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID")),
