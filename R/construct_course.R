@@ -74,7 +74,7 @@ construct_course <- function(course_name, output_file_path) {
     cwd <- getwd()
     path <- paste0(cwd, output_file_path)
     filepath <- file.path(path, paste0(course_name, ".csv"))
-    write.csv(course_df, filepath)
+    readr::write_csv(course_df, filepath)
 
     return(course_df)
 }

@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # gradecalculatorr
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of gradecalculatorr is to calculate grades for a course. The package allows users to customize their own course information with self-defined course component names, to update grades for different course components, and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
