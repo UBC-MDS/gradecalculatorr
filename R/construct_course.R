@@ -12,15 +12,8 @@
 #'     (named based on the 'course_name' paramater)
 #'     to the file path specified by 'output_file_path' paramater
 #'
-#' @param course_name (string) :
-#'              The course name as a string.
-#'              It will be used as the output file name
-#'        output_file_path (string) :
-#'              Path to the output .csv file
-#'              (named based on the 'course_name' paramater)
-#'              under the current working directory as a string.
-#'              The purpose to save under the current working directory it
-#'              to avoid permission issue.
+#' @param course_name the course name as a string to be used as the output file name
+#' @param output_file_path path to the output .csv file to be saved
 #'
 #' @return None
 #' @export
@@ -74,7 +67,7 @@ construct_course <- function(course_name, output_file_path) {
     cwd <- getwd()
     path <- paste0(cwd, output_file_path)
     filepath <- file.path(path, paste0(course_name, ".csv"))
-    write.csv(course_df, filepath)
+    readr::write_csv(course_df, filepath)
 
     return(course_df)
 }

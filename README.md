@@ -4,6 +4,7 @@
 # gradecalculatorr
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Summary
