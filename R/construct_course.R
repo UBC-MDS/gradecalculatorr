@@ -13,7 +13,7 @@
 #'     to the file path specified by 'output_file_path' paramater
 #'
 #' @param course_name The course name as a string to be used as the output file name
-#' @param output_file_path Path to the output .csv file
+#' @param output_file_path Path to the output .csv file to be saved
 #'
 #' @return None
 #' @export
