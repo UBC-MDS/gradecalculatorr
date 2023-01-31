@@ -12,15 +12,8 @@
 #'     (named based on the 'course_name' paramater)
 #'     to the file path specified by 'output_file_path' paramater
 #'
-#' @param course_name (string) :
-#'              The course name as a string.
-#'              It will be used as the output file name
-#' @param output_file_path (string) :
-#'              Path to the output .csv file
-#'              (named based on the 'course_name' paramater)
-#'              under the current working directory as a string.
-#'              The purpose to save under the current working directory it
-#'              to avoid permission issue.
+#' @param course_name The course name as a string to be used as the output file name
+#' @param output_file_path Path to the output .csv file
 #'
 #' @return None
 #' @export
