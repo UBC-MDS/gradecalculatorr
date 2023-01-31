@@ -15,7 +15,7 @@
 #' @param course_name (string) :
 #'              The course name as a string.
 #'              It will be used as the output file name
-#'        output_file_path (string) :
+#' @param output_file_path (string) :
 #'              Path to the output .csv file
 #'              (named based on the 'course_name' paramater)
 #'              under the current working directory as a string.
