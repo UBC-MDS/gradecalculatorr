@@ -18,7 +18,9 @@
 #' @return None
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' construct_course('dsci524','/') 
+#' }
 construct_course <- function(course_name, output_file_path) {
 
     course_total_weight <- 0

@@ -6,7 +6,9 @@
 #' @return return_msg The course overall grade once all course components present 
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' calculate_grade('/tests/testthat/dsci524_grades_all.csv')
+#' }
 calculate_grade <- function(input_file_path) {
 
     cwd <- getwd()
