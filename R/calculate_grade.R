@@ -6,13 +6,15 @@
 #' @return return_msg The course overall grade once all course components present 
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' calculate_grade('/tests/testthat/dsci524_grades_all.csv')
+#' }
 calculate_grade <- function(input_file_path) {
 
     cwd <- getwd()
     path <- paste0(cwd, "/", input_file_path)
-    course_info <- read.csv(path, header = TRUE)
-    # course_info <- read.csv(input_file_path, col.names = TRUE, header = FALSE)
+    course_info <- readr::read_csv(path)
+    # course_info <- readr::read_csv(input_file_path, col.names = TRUE, header = FALSE)
 
     print(course_info)
 
@@ -25,10 +27,13 @@ calculate_grade <- function(input_file_path) {
 
     # Check if all course components have grade present
     for(i in seq_len(nrow(course_info))) {
-        comp <- course_info[i, 1]
-        grade <- course_info[i, 3]
-        weight <- course_info[i, 2]
-
+        row <- course_info[i,]
+        # print(row)
+        comp <- row$'Components'
+        weight <- row$'Weights (%)'
+        grade <- row$'Grades (%)'
+        print(grade)
+        
         if (is.na(grade)) {
             return_msg <- paste0(error_msg_missing_value, comp)
             return (return_msg)
