@@ -1,7 +1,7 @@
-Components,Weights_Percentage,Grades_Percentage
-Assignment1,5,99.55
-Assignment1,5,95.7
-Quiz1,10,85.33
-Quiz2,10,90.25
-Midterm,30,70.25
-Final,40,95.25
+,Components,Weights (%),Grades (%)
+0,Assignment1,5,99.55
+1,Assignment2,5,95.7
+2,Quiz1,10,85.33
+3,Quiz2,10,90.25
+4,Midterm,30,70.25
+5,Final,40,95.25

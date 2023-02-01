@@ -1,7 +1,7 @@
-Components,Weights_Percentage,Grades_Percentage
-Assignment1,5
-Assignment1,5
-Quiz1,10
-Quiz2,10
-Midterm,30
-Final,40
+...1,Components,Weights (%),Grades (%)
+0,Assignment1,5,NA
+1,Assignment2,5,NA
+2,Quiz1,10,NA
+3,Quiz2,10,NA
+4,Midterm,30,NA
+5,Final,40,NA

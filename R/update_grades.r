@@ -44,6 +44,9 @@ save_course_csv <- function(updated_course_df, output_file) {
 #' @examples NA
 update_component_grade <- function(input_file, component, grade) {
     df <- load_course(input_file)
-    df$`Grades (%)`[df$Components == component] <- round(grade, 2)
+    # print(df)
+    grade <- round(grade, 3)
+    # print(grade)
+    df$`Grades (%)`[df$Components == component] <- grade
     save_course_csv(df, input_file)
 }
