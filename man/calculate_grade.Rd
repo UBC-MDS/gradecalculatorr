@@ -18,5 +18,7 @@ When all course components are presented,
 calculate the course overall grade based on information provided.
 }
 \examples{
-NA
+\dontrun{
+calculate_grade('/tests/testthat/dsci524_grades_all.csv')
+}
 }

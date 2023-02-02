@@ -29,5 +29,7 @@ to the file path specified by 'output_file_path' paramater
 }\if{html}{\out{</div>}}
 }
 \examples{
-NA
+\dontrun{
+construct_course('dsci524','/') 
+}
 }
