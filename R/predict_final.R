@@ -7,7 +7,9 @@
 #' @return final_score_needed which is the scores needed for the final assignment. Otherwise return warning message.
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' predict_final('/tests/testthat/dsci524_grades_all.csv', 80.0)
+#' }
 predict_final <- function(input_file, goal) {
 
   # read the input csv file

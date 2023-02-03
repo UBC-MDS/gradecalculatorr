@@ -20,5 +20,7 @@ Calculate what grade the student needs to have for the final assignment in order
 and return the scores needed for the final assignment.
 }
 \examples{
-NA
+\dontrun{
+predict_final('/tests/testthat/dsci524_grades_all.csv', 80.0)
+}
 }
