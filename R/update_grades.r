@@ -8,7 +8,9 @@
 #' @return data.frame which holds the information from 'course.csv'
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' load_course('/tests/testthat/dummycourse.csv')
+#' }
 load_course <- function(input_file) {
     readr::read_csv(file=input_file)
 }
@@ -24,7 +26,9 @@ load_course <- function(input_file) {
 #' @return None
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' save_course_csv(df, 'Assignment 3', '/tests/testthat/dummycourse.csv')
+#' }
 save_course_csv <- function(updated_course_df, output_file) {
     readr::write_csv(updated_course_df, file=output_file)
 }
@@ -41,7 +45,9 @@ save_course_csv <- function(updated_course_df, output_file) {
 #' @return None
 #' @export
 #'
-#' @examples NA
+#' @examples \dontrun{
+#' update_component_grade('/tests/testthat/dummycourse.csv', 'Assignment 3', 97)
+#' }
 update_component_grade <- function(input_file, component, grade) {
     df <- load_course(input_file)
     # print(df)
