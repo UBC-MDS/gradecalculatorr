@@ -1,37 +1,20 @@
 ---
-output: github_document
+title: "gradecalculatorr-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{gradecalculatorr-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
 
-# gradecalculatorr
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/gradecalculatorr/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
-The goal of gradecalculatorr is to calculate grades for a course. The package allows users to customize their own course information with self-defined course component names, to update grades for different course components, and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
-
-
-## Installation
-
-You can install the development version of gradecalculatorr from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("UBC-MDS/gradecalculatorr")
-```
-
-## Usage
+This R package calculates grades for a course. The package allows users to customize their own course information with self-defined course component names, to update grades for different course components, and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
 
 To get started, we load the library:
 
@@ -41,7 +24,7 @@ library(gradecalculatorr)
 
 Next, let's explore the the function construct_course():  
 
-```{r construct course usingconstruct_course()}
+```{r construct course}
 construct_course('dsci524','/') 
 #> construct_course('dsci524','/') 
 # What is name of dsci524 component #1? lab1
@@ -64,7 +47,6 @@ construct_course('dsci524','/')
 # 5      quiz1                 20              <NA>
 # 6      quiz2                 20              <NA>
 ```
-
 Then, let's update the grades:
 
 ```{r update the grades}
@@ -74,7 +56,6 @@ update_component_grade('dsci524.csv', 'lab3', 86.65)
 update_component_grade('dsci524.csv', 'lab4', 88.75)
 update_component_grade('dsci524.csv', 'quiz1', 90.15)
 ```
-
 Then, let's calculate how well the quiz2 has to be in order to get 85% total for course 524:
 
 ```{r predict quiz2 grade}
@@ -89,3 +70,6 @@ update_component_grade('dsci524.csv', 'quiz2', 90.25)
 calculate_grade('dsci524.csv')
 # > [1] "Course grade is 89.15%"
 ```
+
+
+

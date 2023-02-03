@@ -11,9 +11,8 @@
 
 This R package calculates grades for a course. The package allows users to customize their own course information with self-defined course component names, to update grades for different course components, and even understand how well the final exam needs to be to pass the course or achieve a target final grade.
 
-## Usage
 
-### Functions
+## Functions
 
 This package contains the following functions:
 
@@ -42,6 +41,65 @@ You can install the development version of gradecalculatorr from
 # install.packages("devtools")
 devtools::install_github("UBC-MDS/gradecalculatorr")
 ```
+## Usage
+
+To get started, we load the library:
+
+```{r setup}
+library(gradecalculatorr)
+```
+
+Next, let's explore the the function construct_course():  
+
+```{r construct course usingconstruct_course()}
+construct_course('dsci524','/') 
+#> construct_course('dsci524','/') 
+# What is name of dsci524 component #1? lab1
+# What is weight percentage of dsci524 component #1? 15
+# What is name of dsci524 component #2? lab2
+# What is weight percentage of dsci524 component #2? 15
+# What is name of dsci524 component #3? lab3
+# What is weight percentage of dsci524 component #3? 15
+# What is name of dsci524 component #4? lab4
+# What is weight percentage of dsci524 component #4? 15
+# What is name of dsci524 component #5? quiz1
+# What is weight percentage of dsci524 component #5? 20
+# What is name of dsci524 component #6? quiz2
+# What is weight percentage of dsci524 component #6? 20
+#  Components         Weights (%)         Grades (%)
+# 1       lab1                 15              <NA>
+# 2       lab2                 15              <NA>
+# 3       lab3                 15              <NA>
+# 4       lab4                 15              <NA>
+# 5      quiz1                 20              <NA>
+# 6      quiz2                 20              <NA>
+```
+
+Then, let's update the grades:
+
+```{r update the grades}
+update_component_grade('dsci524.csv', 'lab1', 90.15)
+update_component_grade('dsci524.csv', 'lab2', 88.22)
+update_component_grade('dsci524.csv', 'lab3', 86.65)
+update_component_grade('dsci524.csv', 'lab4', 88.75)
+update_component_grade('dsci524.csv', 'quiz1', 90.15)
+```
+
+Then, let's calculate how well the quiz2 has to be in order to get 85% total for course 524:
+
+```{r predict quiz2 grade}
+predict_final('dsci524.csv', 85)
+# > [1] 69.5
+```
+
+After quiz2, we know we get 90 for quiz2 and let's calculate the overall grade for course 524:
+
+```{r calculate the overall grade}
+update_component_grade('dsci524.csv', 'quiz2', 90.25)
+calculate_grade('dsci524.csv')
+# > [1] "Course grade is 89.15%"
+```
+
 
 ## Contributing
 
