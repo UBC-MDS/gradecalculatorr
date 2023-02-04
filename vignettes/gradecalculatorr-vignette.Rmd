@@ -25,7 +25,7 @@ library(gradecalculatorr)
 Next, let's explore the the function construct_course():  
 
 ```{r construct course}
-construct_course('dsci524','/') 
+# construct_course('dsci524','/') 
 #> construct_course('dsci524','/') 
 # What is name of dsci524 component #1? lab1
 # What is weight percentage of dsci524 component #1? 15
