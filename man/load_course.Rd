@@ -17,5 +17,7 @@ Takes the path to the course's .csv file as an argument ('course.csv'), reads th
 and saves the file as a dataframe to be returned
 }
 \examples{
-NA
+\dontrun{
+load_course('/tests/testthat/dummycourse.csv')
+}
 }

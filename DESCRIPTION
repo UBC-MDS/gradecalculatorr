@@ -24,3 +24,7 @@ Imports:
     testthat,
     tidyr,
     utils
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

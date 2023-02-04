@@ -21,5 +21,7 @@ Takes the data.frame of the course with updated grades, the path to the output
 file, and saves the data.frame as a .csv
 }
 \examples{
-NA
+\dontrun{
+update_component_grade('/tests/testthat/dummycourse.csv', 'Assignment 3', 97)
+}
 }

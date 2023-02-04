@@ -19,5 +19,7 @@ Takes the data.frame of the course with updated grades, the path to the output
 file, and saves the data.frame as a .csv
 }
 \examples{
-NA
+\dontrun{
+save_course_csv(df, 'Assignment 3', '/tests/testthat/dummycourse.csv')
+}
 }
